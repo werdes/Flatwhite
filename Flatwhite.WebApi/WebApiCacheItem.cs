@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System.Net.Http.Headers;
+using System.Security.Cryptography;
 
 namespace Flatwhite.WebApi
 {
@@ -35,6 +36,11 @@ namespace Flatwhite.WebApi
             }
             internal set { _checkSum = value; }
         }
+
+        /// <summary>
+        /// Response Headers
+        /// </summary>
+        public HttpContentHeaders ResponseHeaders { get; set; }
 
         /// <summary>
         /// Media type

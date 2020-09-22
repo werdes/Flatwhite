@@ -338,6 +338,7 @@ namespace Flatwhite.WebApi
                 {
                     Key = storedKey,
                     Content = await responseContent.ReadAsByteArrayAsync().ConfigureAwait(false),
+                    ResponseHeaders = responseContent.Headers,
                     ResponseMediaType = responseContent.Headers.ContentType.MediaType,
                     ResponseCharSet = responseContent.Headers.ContentType.CharSet,
                     StoreId = cacheStore.StoreId,
